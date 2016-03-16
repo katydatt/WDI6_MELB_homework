@@ -10,8 +10,8 @@ console.log(speech);
 //The Even/Odd Reporter
 
 for (var num = 1; num < 21 ; num++ ){
-if (num % 2 === 0) { console.log("even");
-    } else console.log (num);
+if (num % 2 === 0) { console.log(num + " is an even number");
+    } else console.log (num + " is an odd number");
 }
 
 //Multiplication Table
@@ -24,3 +24,4 @@ var userChoice = prompt("Please choose between steak, fruitsalad, tofurkey, pork
 if (userChoice === 'steak'||'porkchops') {
     console.log("Vegan's Beware!");
 } else console.log("This cuisine is vegan friendly.!");
+
