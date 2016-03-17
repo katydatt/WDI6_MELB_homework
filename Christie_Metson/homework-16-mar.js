@@ -5,8 +5,9 @@ console.log('its the fucking catalina wine mixer');
 // 1. Your top choices
 
 var soundOfMusic = ['whiskers on kittens', 'warm woolen mittens', 'bright copper kettles'];
+var suffix = ['st', 'nd', 'rd', 'th']
 
-for (i = 0; i < soundOfMusic.length; i++) {
+for (var i = 0; i < soundOfMusic.length; i++) {
 
   var choice = 0;
 
@@ -24,12 +25,11 @@ for (i = 0; i < soundOfMusic.length; i++) {
   }
 
   console.log('my ' + choice + ' choice is ' + soundOfMusic[i]);
-
-}
+};
 
 // 2. The even/odd reporter
 
-for (i = 0; i < 21; i ++) {
+for (var i = 0; i < 21; i ++) {
   if (i % 2 === 0) {
     console.log('number ' + i + ' is even');
   }
@@ -42,10 +42,15 @@ for (i = 0; i < 21; i ++) {
 // Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 // I still don't get what this means :) I'll wait till tomorrow for more information.
 
-for (i = 0; i < 10; i++) {
+for (var i = 0; i <= 10; i++) {
+
   var multiplied = i * 9;
   console.log(i + ' * 9 = ' + multiplied);
-}
+
+  // for (var g = 1; g <= 10; g++) {
+  //   console.log(j + 'x' + i '= ' j * i)
+  // };
+};
 
 // 4. The Vegan Test
 
