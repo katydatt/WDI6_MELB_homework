@@ -5,6 +5,14 @@ for (var index = 1; index <= colors.length; index++){
   console.log("My #" + index + " colors choice is "+ colors[index-1]);
 }
 
+// DT
+var suffix =['st','nd','rd','th'];
+
+funtion getSuffix(index){
+
+  return suffix;
+}
+
 //the even/odd reporter 0~20
 
 for (var num = 0; num <= 20; num++){
@@ -31,3 +39,5 @@ if (choose === "STEAK" || choose === "PORK CHOPS"){
 }else {
   console.log("please choose one disk of menu !!");
 }
+// DT
+var menu = ['steak','pork chops', 'fruit salad', 'tofurkey'];
