@@ -70,7 +70,7 @@ Movies = {
  	title: 'The Matrix',
  	duration: 183,
  	stars: ['James Bond','Tom Hankins','Eliza Star','Tim Tallend','Nick Jones']
- }
+ };
 
 
 console.log(Movies.title + " lasts for " + Movies.duration + ". Stars:" + Movies.stars);

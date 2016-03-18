@@ -8,7 +8,7 @@ function build_tree(size){
 	}
 }
 
-//build_tree(20);
+build_tree(20);
 
 function spotlight(size){
     var input = "^";
@@ -38,6 +38,6 @@ function build_diamond (size) {
     build_inverse_tree(size);
 }
 
-build_diamond(12)
+build_diamond(12);
 
 
