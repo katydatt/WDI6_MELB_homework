@@ -1,4 +1,4 @@
-console.log('PTV');
+console.log('--PTV Journey Planner--');
 
 // Write a JS program that works out display the journey when you give it an origin and destination.
 
@@ -9,7 +9,7 @@ var trainLines2 = [
 ]
 
 // finds the co-ordinates of a stop.
-var stationFinderArray = function(origin, destination) {
+var stationFinder = function(origin, destination) {
 
   // finds the origin co-ordinates.
   var start;
@@ -29,28 +29,60 @@ var stationFinderArray = function(origin, destination) {
        }
      }
   }
-  console.log(start);
-  console.log(end);
+  //debugger
+  console.log('The origin stop index is: ' + start);
+  console.log('The destination stop index is: ' + end);
 }
 
-stationFinderArray('flagstaff', 'windsor');
+// finds the index of each richmond stop
+var richmondChangePoint = function() {
 
-// figure out value of richmond of each line.
-// splice the array on each line to know as an index where to travel to get to the correct station.
+var alameinChange;
+  for (var i = 0; i < trainLines2.length; i ++) {
+    for (var r = 0; r < trainLines2[0].length; r ++) {
+      if (trainLines2 [0][r] === 'richmond') {
+        var alameinChange = [0, r];
+      };
+    }
+  }
+
+  var glenChange;
+  for (var a = 0; a < trainLines2.length; a ++) {
+    for (var c = 0; c < trainLines2[1].length; c ++) {
+      if (trainLines2 [1][c] === 'richmond') {
+        var glenChange = [1, c];
+      };
+    }
+  }
+
+  var sandyChange;
+  for (var s = 0; s < trainLines2.length; s ++) {
+    for (var d = 0; d < trainLines2[2].length; d ++) {
+      if (trainLines2 [2][d] === 'richmond') {
+        var sandyChange = [2, d];
+      };
+    }
+  }
+
+  // debugger
+  console.log('The index of Richmond on the Alamein line is: ' + alameinChange);
+  console.log('The index of Richmond on the Glen Waverly line is: ' + glenChange);
+  console.log('The index of Richmond on the Sandringham line is: ' + sandyChange);
+}
+
+// splice arrays of each line so that they can be re-joined to make a user's full journey
+var arraySplicer = function() {
 
 
-// var printStopNames = function(origin, destination) {
-//
-//   // hardcoding in alamein line for now.
-//   for (var index = 0; index < trainLines.alamein.length; index ++) {
-//     var originIndex = trainLines.alamein.indexOf(origin);
-//     var destinationIndex = trainLines.alamein.indexOf(destination);
-//   }
-//
-//   var printStopNames = []
-//
-//   for (var c = originIndex; c <= destinationIndex; c ++) {
-//       printStopNames.push(trainLines.alamein[c]);
-//   }
-//   console.log('Here are your stops: ' + printStopNames);
-// }
+
+}
+
+// prints out a user's journey to the console
+var printStopNames = function() {
+
+  // print stop names by pushing them in to a new array to print out.
+  // could be joined to the array splitter function?
+}
+
+stationFinder('flagstaff', 'windsor');
+richmondChangePoint();
