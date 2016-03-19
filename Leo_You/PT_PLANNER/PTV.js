@@ -164,18 +164,19 @@ function printJourney(lineStopNo1,lineStopNo2){
 
 
 function main(origin,destination){
-/*    origin = origin || prompt("Please enter your current station:   ps: Case matters");
+    origin = origin || prompt("Please enter your current station:   ps: Case matters");
     destination = destination || prompt("Please enter your destination:   ps: Case matters");
    while(!validation(origin) || !validation(destination)){
      console.log("Origin or destination you entered may not exist, please try again!!!");
      console.log("Please note the uppercase letters !!!");
-     origin = origin || prompt("Please enter your current station:  ps: Case matters");
-     destination = destination || prompt("Please enter your destination:  ps: Case matters");
-   } */
+     origin = prompt("Please enter your current station:  ps: Case matters");
+     destination = prompt("Please enter your destination:  ps: Case matters");
+   }
    var lineStopNo1 = searchStopNo(origin);
    var lineStopNo2 = searchStopNo(destination);
    printJourney(lineStopNo1,lineStopNo2);
 }
 //===========================================================================
 main("Hawthorn","East Richmond");
-// main("Southern Cross","Hawthorn");
+main("Southern Cross","Hawthorn");
+main();
