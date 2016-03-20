@@ -54,8 +54,11 @@ var runJourney = function (theService) {
   if (trainServiceOrigin === trainServiceStop) {
     if (getStartIndex > getFinalIndex) {
         var reversal = trainServiceOrigin.reverse();
-        console.log (reversal);
-        var sliceJourneySame = reversal.slice(getFinalIndex, getStartIndex + 1);
+        var getReverseIndexStart = reversal.indexOf(getOriginStop);
+        console.log(getReverseIndexStart);
+        var getReverseIndexLast = reversal.indexOf(getDestinationStop);
+        console.log(getReverseIndexLast)
+        var sliceJourneySame = reversal.slice(getReverseIndexStart, getReverseIndexLast + 1);
         console.log(sliceJourneySame);
         var totalStopsBack = getStartIndex - getFinalIndex;
         var journeySameLine = sliceJourneySame.join(directionArrows);
