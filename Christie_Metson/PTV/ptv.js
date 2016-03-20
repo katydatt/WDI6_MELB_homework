@@ -9,46 +9,41 @@ var trainLines = [
 var stationFinder = function(origin, destination) {
 
   // finds the origin line indices.
-  var start1;
-  var start2;
     for (var i = 0; i < trainLines.length; i ++) {
       for (var j = 0; j < trainLines[i].length; j ++) {
           if (trainLines [i][j] === origin) {
-            start1 = [i];
-            start2 = [j];
+            var start = [i,j];
+            var startLine = i;
       }
     }
   }
   // finds the destination line indices.
-  var end1;
-  var end2;
     for (c = 0; c < trainLines.length; c ++) {
       for (var a = 0; a < trainLines[c].length; a ++) {
            if (trainLines [c][a] === destination) {
-            end1 = [c];
-            end2 = [a];
+            var end = [c, a];
+            var endLine = c;
        }
      }
   }
 
-  if (start1 == 0) {
+  if (start == 0) {
     console.log('this statement works 0');
-    var startingAlamein = trainLines.slice([start1, start2]);
+    var startingAlamein = trainLines.slice([start][0,1]);
   }
-  else if (start1 == 1) {
+  else if (startLine == 1) {
     console.log('this statement works 1');
-    var startingGlen = trainLines.slice([0,1][0,5]); //pushes whole bloody nested array in!
+    var startingGlen = trainLines.slice(start,[1,4]);
+    //pushes whole bloody nested array or nothing! in!
   }
-  else if (start1 == 2) {
+  else if (start == 2) {
     console.log('this statement works 2');
-    var startingSandy = trainLines.slice([start1, start2]);
+    var startingSandy = trainLines.slice([start][2,1]);
   }
 
   //debugger
-  console.log(start1);
-  console.log(start2);
-  console.log(end1);
-  console.log(end2);
+  console.log(start);
+  console.log(end);
   console.log(startingAlamein);
   console.log(startingGlen);
   console.log(startingSandy);
@@ -56,43 +51,6 @@ var stationFinder = function(origin, destination) {
 }
 
 stationFinder('melbourne central', 'melbourne central');
-
-
-// finds the index of each richmond stop
-var richmondChangePoint = function() {
-
-var alameinChange;
-  for (var i = 0; i < trainLines.length; i ++) {
-    for (var r = 0; r < trainLines[0].length; r ++) {
-      if (trainLines [0][r] === 'richmond') {
-        var alameinChange = [0, r];
-      };
-    }
-  }
-
-  var glenChange;
-  for (var a = 0; a < trainLines.length; a ++) {
-    for (var c = 0; c < trainLines[1].length; c ++) {
-      if (trainLines [1][c] === 'richmond') {
-        var glenChange = [1, c];
-      };
-    }
-  }
-
-  var sandyChange;
-  for (var s = 0; s < trainLines.length; s ++) {
-    for (var d = 0; d < trainLines[2].length; d ++) {
-      if (trainLines [2][d] === 'richmond') {
-        var sandyChange = [2, d];
-      };
-    }
-  }
-
-  // debugger
-  console.log('The index of Richmond on the Alamein line is: ' + alameinChange);
-  console.log('The index of Richmond on the Glen Waverly line is: ' + glenChange);
-  console.log('The index of Richmond on the Sandringham line is: ' + sandyChange);
-}
 
 var journeyPrinter = function() {
 // slice first part of journey to Richmond (add to new array)
@@ -109,6 +67,4 @@ console.log('you have: ' + fullJourney.length + ' stops in your journey');
 
 }
 
-// richmondChangePoint();
 // journeyPrinter();
-// console.log(trainLines);
