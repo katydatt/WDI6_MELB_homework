@@ -55,7 +55,7 @@ var runJourney = function (theService) {
     if (getStartIndex > getFinalIndex) {
         var reversal = trainServiceOrigin.reverse();
         console.log (reversal);
-        var sliceJourneySame = trainServiceOrigin.slice(getFinalIndex - 1, getStartIndex);
+        var sliceJourneySame = reversal.slice(getFinalIndex, getStartIndex + 1);
         console.log(sliceJourneySame);
         var totalStopsBack = getStartIndex - getFinalIndex;
         var journeySameLine = sliceJourneySame.join(directionArrows);
@@ -152,7 +152,7 @@ var runJourney = function (theService) {
                 secondLegResults = slicey;
 
               } else {
-                var totalStopsBack = 1 - getStartIndex;
+                var totalStopsBack = 1 - getFinalIndex;
                 console.log(totalStopsBack);
                 var slicey = alamein.slice(getFinalIndex,richmondStopAlamein);
                 secondLegResults = slicey;
