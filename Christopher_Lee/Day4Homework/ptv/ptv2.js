@@ -90,7 +90,7 @@ var runJourney = function (theService) {
                 var newIndexAla = alamein.indexOf(getOriginStop);
                 var totalStops = getStartIndex - 1;
                 console.log(totalStops);
-                var sliceUp = backwardsAla.slice(newIndexAla,getFinalIndex);
+                var sliceUp = backwardsAla.slice(newIndexAla,5);
                   firstLegResults = sliceUp;
 
               } else {
@@ -169,7 +169,7 @@ var runJourney = function (theService) {
                 secondLegResults = slicey;
 
               } else {
-                var totalStopsBack = 3 - getStartIndex;
+                var totalStopsBack = 3 - getFinalIndex;
                 console.log(totalStopsBack);
                 var slicey = glenwaverly.slice(getFinalIndex,richmondStopGlen);
                 secondLegResults = slicey;
@@ -186,7 +186,7 @@ var runJourney = function (theService) {
                 secondLegResults = slicey;
 
               } else {
-                var totalStopsBack = 3 - getStartIndex;
+                var totalStopsBack = 1 - getFinalIndex;
                 console.log(totalStopsBack);
                 var slicey = sandringham.slice(getFinalIndex,richmondStopSandy);
                 secondLegResults = slicey;
