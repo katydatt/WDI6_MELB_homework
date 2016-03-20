@@ -83,5 +83,4 @@ var journeyPlanner = function(origin, dest) {
 
 }
 
-
-journeyPlanner('Southern cross', 'Tooronga');
+journeyPlanner('Southern Cross', 'Tooronga');
