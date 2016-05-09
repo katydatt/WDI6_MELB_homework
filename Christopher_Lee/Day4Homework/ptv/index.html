@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Working PTV</title>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id = 'firstContainer'>
+
+    <div id="logo">
+      <img src ="images/ptv.png">
+    </div>
+
+    <div id="journeyMap">
+      <h1>CRAP-TV APP</h1>
+      <div>Origin Stop</div>
+      <select id="firstStop">
+        <option value="Burnley">Burnley</option>
+        <option value="East Richmond">East Richmond</option>
+        <option value="Flagstaff">Flagstaff</option>
+        <option value="Flinders Street">Flinders Street</option>
+        <option value="Glenferrie">Glenferrie</option>
+        <option value="Hawthorn">Hawthorn</option>
+        <option value="Kooyong">Kooyong</option>
+        <option value="Melbourne Central">Melbourne Central</option>
+        <option value="Parliament">Parliament</option>
+        <option value="Prahran">Prahran</option>
+        <option value="Richmond">Richmond</option>
+        <option value="South Yarra">South Yarra</option>
+        <option value="Southern Cross">Southern Cross</option>
+        <option value="Tooranga">Tooranga</option>
+        <option value="Windsor">Windsor</option>
+      </select>
+
+      <br />
+      <br />
+      <div>Destination Stop</div>
+      <select id="finalStop">
+        <option value="Burnley">Burnley</option>
+        <option value="East Richmond">East Richmond</option>
+        <option value="Flagstaff">Flagstaff</option>
+        <option value="Flinders Street">Flinders Street</option>
+        <option value="Glenferrie">Glenferrie</option>
+        <option value="Hawthorn">Hawthorn</option>
+        <option value="Kooyong">Kooyong</option>
+        <option value="Melbourne Central">Melbourne Central</option>
+        <option value="Parliament">Parliament</option>
+        <option value="Prahran">Prahran</option>
+        <option value="Richmond">Richmond</option>
+        <option value="South Yarra">South Yarra</option>
+        <option value="Southern Cross">Southern Cross</option>
+        <option value="Tooranga">Tooranga</option>
+        <option value="Windsor">Windsor</option>
+      </select>
+    </div>
+
+        <br />
+    <button id="myButton">Display Journey</button>
+
+  </div>
+
+  <div id="secondContainer">
+    <div id ="journeyLegs">
+      <h4>Your Journey</h4>
+
+      <span id = "journey"></span><span id ="journeyBack"></span>
+
+      <h4>Train Line Guide</h4>
+
+    <span id = "nameHere"></span>
+
+    <h4>Total Stop(s)</h4>
+    <span id ="stops"></span>
+    </div>
+
+  </div>
+  <small>Christopher Lee 2016 @ General Assembly Melbourne</small>
+
+  <script src="ptv.js" charset="utf-8"></script>
+
+</body>
+</html>
