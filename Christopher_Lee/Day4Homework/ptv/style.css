@@ -1,0 +1,33 @@
+body {
+  margin:0 auto;
+  text-align:center;
+  background: url(images/network.png);
+  background-size:cover;
+  color:white;
+}
+
+img {
+  margin-top:5em;
+  height:auto;
+  width: 200px;
+}
+
+h4 {
+  font-size:20px;
+}
+
+#secondContainer {
+  text-align:center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+#journey, #journeyBack, #nameHere, #stops, #same {
+  color: #A9A9A9;
+  font-family: 'Oxygen', sans-serif;
+}
+
+small {
+  font-size:10px;
+}
